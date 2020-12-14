@@ -1,0 +1,13 @@
+/**index.wxss**/
+.search {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 20rpx auto;
+  border: 1px solid #ccc;
+  line-height: 30rpx;
+}
+
+icon {
+  line-height: 30rpx;
+}

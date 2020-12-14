@@ -7,6 +7,28 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+// import mysql for connectiong mysql
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'wyb@19850923',
+  database: 'pupu'
+});
+
+connection.connect();
+
+connection.query('SELECT * from admin', (err, data, fields) => {
+  if (err) {
+    console.log(err);
+    return;
+  }
+
+  console.log(data);
+});
+
+// connection.end();
+
 var app = express();
 
 // view engine setup
